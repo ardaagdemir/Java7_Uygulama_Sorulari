@@ -15,7 +15,7 @@ public class Sms implements Message{
 	
 	public static void smsGonder(String message) {
 		
-		String gonderString = message;
+		String gonder = message;
 	}
 	
 }

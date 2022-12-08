@@ -1,6 +1,5 @@
 package com.bilgeadam.solid_example.dependency_inversion;
 
-import java.util.List;
 
 public class Notification {
 

@@ -9,7 +9,6 @@ public class Student {
 
 	static int studentNumber;
 	
-	
 	public static void main(String[] args) {
 
 		Student.studentNumber++;
