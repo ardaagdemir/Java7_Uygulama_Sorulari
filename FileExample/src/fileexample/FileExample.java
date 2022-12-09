@@ -8,8 +8,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class FileExample {
-	
+public class FileExample extends Object{
 	public static void dosyaYarat(File file) throws IOException {
 		if(file.exists()) {
 			System.out.println("Dosya zaten var.");
@@ -54,23 +53,4 @@ public class FileExample {
 		}
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
