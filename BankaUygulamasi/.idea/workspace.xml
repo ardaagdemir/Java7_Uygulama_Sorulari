@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a42761b9-cc12-4672-a059-e38225e6192d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Maraton1_Uygulama/src/cavap_2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Maraton1_Uygulama/src/cavap_2/Main.java" afterDir="false" />
+    <list default="true" id="26c974b8-219c-4134-b0b7-8120623f00e1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StreamAPI/src/stream/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StreamAPI/src/com/bilgeadam/stream/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,7 +14,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="2IePwzwUI1Fz8dgzHask8PztC7u" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2ImfSdb40yPwY31GLlw2ocGszCo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -23,18 +28,64 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Arda/Documents/BilgeAdamEğitim/Java/BankaUygulamasi"
+    "last_opened_file_path": "C:/Users/Arda/Documents/BilgeAdamEğitim/Java"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
+      <option name="appName" />
+      <option name="appServicePlanName" />
+      <option name="appServicePlanResourceGroup" />
+      <option name="appSettingsKey" value="c6382a08-5332-4914-8b9d-e1bb29af0ed7" />
+      <option name="artifact" />
+      <option name="autoPort" value="true" />
+      <option name="debugOptions" />
+      <option name="deployment" />
+      <option name="deploymentStagingDirectoryPath" />
+      <option name="funcPath" />
+      <option name="funcPort" value="0" />
+      <option name="hostJsonPath" />
+      <option name="insightsName" />
+      <option name="instrumentationKey" />
+      <option name="javaVersion" />
+      <option name="localSettingsJsonPath" />
+      <option name="moduleName" />
+      <option name="os" />
+      <option name="pricingTier" />
+      <option name="providerMap">
+        <map />
+      </option>
+      <option name="region" />
+      <option name="resourceGroup" />
+      <option name="stagingFolder" />
+      <option name="subscription" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="BankaUygulamasi" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="BankaUygulamasi" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a42761b9-cc12-4672-a059-e38225e6192d" name="Changes" comment="" />
-      <created>1670539318207</created>
+      <changelist id="26c974b8-219c-4134-b0b7-8120623f00e1" name="Changes" comment="" />
+      <created>1670791679768</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1670539318207</updated>
-      <workItem from="1670539319940" duration="6000" />
+      <updated>1670791679768</updated>
+      <workItem from="1670791681047" duration="91000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BankaUygulamasi.iml" filepath="$PROJECT_DIR$/BankaUygulamasi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FileExample.iml" filepath="$PROJECT_DIR$/FileExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java.iml" filepath="$PROJECT_DIR$/Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java7_Uygulama.iml" filepath="$PROJECT_DIR$/Java7_Uygulama.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Maraton1_Uygulama.iml" filepath="$PROJECT_DIR$/Maraton1_Uygulama.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StreamAPI.iml" filepath="$PROJECT_DIR$/StreamAPI.iml" />
+    </modules>
+  </component>
+</project>
