@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26c974b8-219c-4134-b0b7-8120623f00e1" name="Changes" comment="">
+    <list default="true" id="26c583c8-156f-4434-8e34-8eaa736bb92a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StreamAPI/src/stream/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StreamAPI/src/com/bilgeadam/stream/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/bilgeadam/manager/AccountManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/bilgeadam/manager/AccountManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StreamAPI/bin/com/bilgeadam/stream/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../StreamAPI/bin/com/bilgeadam/stream/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StreamAPI/src/com/bilgeadam/stream/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StreamAPI/src/com/bilgeadam/stream/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +21,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2ImfSdb40yPwY31GLlw2ocGszCo" />
+  <component name="ProjectId" id="2ImqvgCEucgqlYAGFn5iCgzD6V4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -27,8 +31,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Arda/Documents/BilgeAdamEğitim/Java"
+    "WebServerToolWindowFactoryState": "false"
   }
 }]]></component>
   <component name="RunManager">
@@ -36,7 +39,7 @@
       <option name="appName" />
       <option name="appServicePlanName" />
       <option name="appServicePlanResourceGroup" />
-      <option name="appSettingsKey" value="c6382a08-5332-4914-8b9d-e1bb29af0ed7" />
+      <option name="appSettingsKey" value="323ff594-7380-4c08-9b6c-dd0177b31911" />
       <option name="artifact" />
       <option name="autoPort" value="true" />
       <option name="debugOptions" />
@@ -63,29 +66,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="BankaUygulamasi" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="BankaUygulamasi" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="26c974b8-219c-4134-b0b7-8120623f00e1" name="Changes" comment="" />
-      <created>1670791679768</created>
+      <changelist id="26c583c8-156f-4434-8e34-8eaa736bb92a" name="Changes" comment="" />
+      <created>1670797338371</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1670791679768</updated>
-      <workItem from="1670791681047" duration="91000" />
+      <updated>1670797338371</updated>
+      <workItem from="1670797339626" duration="89000" />
     </task>
     <servers />
   </component>
