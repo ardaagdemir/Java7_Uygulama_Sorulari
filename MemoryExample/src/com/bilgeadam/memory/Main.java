@@ -55,5 +55,6 @@ public class Main {
         System.out.println("Güncel Calisan1: " + calisan1.name);
         System.out.println("Güncel Calisan2: " + calisan2.name);*/
 
+
     }
 }

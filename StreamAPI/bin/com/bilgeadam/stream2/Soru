@@ -1,0 +1,14 @@
+Kisi adında bir sınıf oluşturalacak.
+isim, yaş, cinsiyet
+
+Cinsiyet bir enum olacak.
+
+3 parametreli constructor
+
+1) Main' de 5 tane kisi tanımlanacak. Bu kisiler bir listeye eklenecek.
+Daha sonra bu kisilerde kadın olanlar ayrı bir listeye eklenip yazdırılacak.
+
+2) Kişilerin isim ve yaş değerleri bir set' e atılıp yazdırılacak
+
+3) Kişiler yaşlarıa göre sıralanacak ve bir listeye atılacak.
+.sorted() metodunu araştırın (Comparator)
