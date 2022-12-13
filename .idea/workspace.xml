@@ -1,13 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="fa0fd716-c694-45be-8b0d-78eec101ee7f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BankaUygulamasi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BankaUygulamasi/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryExample/out/production/MemoryExample/com/bilgeadam/memory/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryExample/out/production/MemoryExample/com/bilgeadam/memory/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryExample/out/production/MemoryExample/com/bilgeadam/memory/StringPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryExample/out/production/MemoryExample/com/bilgeadam/memory/StringPool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MemoryExample/src/com/bilgeadam/memory/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryExample/src/com/bilgeadam/memory/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -16,6 +30,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Imh8dUd1OMaFMKVewn7emQkVAG" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -25,7 +42,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Arda/Documents/BilgeAdamEğitim/Java",
+    "last_opened_file_path": "C:/Users/Arda/Documents/BilgeAdamEğitim/Java/Java7_Uygulama",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
@@ -72,6 +93,7 @@
       <updated>1670792507563</updated>
       <workItem from="1670792508867" duration="10000" />
       <workItem from="1670792524950" duration="214000" />
+      <workItem from="1670912452000" duration="1889000" />
     </task>
     <servers />
   </component>
