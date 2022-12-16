@@ -4,22 +4,26 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
-
 public class Main {
 
     public static void main(String[] args) {
-        /*Bütün productları getir
+        //Bütün productları getir
         getAllProducts();
-        */
 
         /*Product ekle
         Product product1 = new Product(null, "Kılıfı", "Elektronik", 80, "Telefon");
         productInsert(product1);*/
-        productInsert("Telefon Kılıfı", "Elektronik", 70, "Telefon");
+        //productInsert("Telefon Kılıfı", "Elektronik", 70, "Telefon");
 
+        //Product sil
+        /*int status = productDelete(14);
+        System.out.println(status);*/
+
+        //Product update
+        //productUpdate(4, 1300);
     }
-    public static void getAllProducts(){
+
+    public static void getAllProducts() {
         DB db = new DB();
         try {
             /*String sqlLogin = "select * from user where email='' +email+ and password = '' +userPassword+";
@@ -34,14 +38,14 @@ public class Main {
             PreparedStatement stProduct = db.connection.prepareStatement("Select * from product");
             ResultSet rsProduct = stProduct.executeQuery();
 
-            while(rsProduct.next()){
+            while (rsProduct.next()) {
                 Integer productId = rsProduct.getInt("productId");
                 String productName = rsProduct.getString("productName");
                 String productCategory = rsProduct.getString("productCategory");
                 Integer price = rsProduct.getInt("price");
                 String description = rsProduct.getString("description");
 
-                Product product = new Product(productId,productName,productCategory,price,description);
+                Product product = new Product(productId, productName, productCategory, price, description);
                 System.out.println(product);
             }
         } catch (SQLException e) {
@@ -57,7 +61,7 @@ public class Main {
         try {
             PreparedStatement insertStatement = db.connection.prepareStatement
                     ("insert into product(productName, productCategory, price, description) " +
-                    "values(?,?,?,?)");
+                            "values(?,?,?,?)");
             insertStatement.setString(1, productName);
             insertStatement.setString(2, productCategory);
             insertStatement.setInt(3, price);
@@ -73,13 +77,38 @@ public class Main {
     }
 
     //Soru --> productDelete() metodunuz yazınız ve veritabanından bir veriyi siliniz.
+    public static int productDelete(int productId) {
+        int status = 0;
+        DB db = new DB();
+        try {
+            PreparedStatement deleteStatement = db.connection.prepareStatement("delete from product where productId = ?");
+            deleteStatement.setInt(1, productId);
+            status = deleteStatement.executeUpdate();
+            deleteStatement.close();
+            db.connection.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        return status;
+    }
 
+    //Soru --> productUpdate() metodunu yazınız ve veritabanından bir veriyi güncelleyiniz.
+    public static void productUpdate(int productId, int price){
+        DB db = new DB();
+        try {
+            PreparedStatement updateStatement = db.connection.prepareStatement("update product set price= ? where productId = ?");
+            updateStatement.setInt(1, price);
+            updateStatement.setInt(2, productId);
+            updateStatement.executeUpdate();
+            System.out.println("Update metodu çalıştı");
+            updateStatement.close();
+            db.connection.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
-
-
-
-
-
-
+    //Soru --> productById() metodunu yazınız ve ilgili id'ye sahip productın bütün özelliklerini gösteriniz.
 
 }
+
