@@ -3,12 +3,15 @@ package db_connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
         //Bütün productları getir
-        getAllProducts();
+        //getAllProducts();
 
         /*Product ekle
         Product product1 = new Product(null, "Kılıfı", "Elektronik", 80, "Telefon");
@@ -16,15 +19,16 @@ public class Main {
         //productInsert("Telefon Kılıfı", "Elektronik", 70, "Telefon");
 
         //Product sil
-        /*int status = productDelete(14);
-        System.out.println(status);*/
+        //productDelete(8);
 
         //Product update
-        //productUpdate(4, 1300);
+        productUpdate(5, 1300);
     }
 
     public static void getAllProducts() {
         DB db = new DB();
+        List<Product> ls = new ArrayList<>();
+        Product product = null;
         try {
             /*String sqlLogin = "select * from user where email='' +email+ and password = '' +userPassword+";
 
@@ -45,8 +49,14 @@ public class Main {
                 Integer price = rsProduct.getInt("price");
                 String description = rsProduct.getString("description");
 
-                Product product = new Product(productId, productName, productCategory, price, description);
-                System.out.println(product);
+                product = new Product(productId, productName, productCategory, price, description);
+                ls.add(product);
+            }
+            if (ls.isEmpty()) {
+                System.out.println("Product is empty");
+            } else {
+                ls.forEach(item -> System.out.println(item));
+
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
@@ -77,32 +87,52 @@ public class Main {
     }
 
     //Soru --> productDelete() metodunuz yazınız ve veritabanından bir veriyi siliniz.
-    public static int productDelete(int productId) {
-        int status = 0;
+    public static void productDelete(int productId) {
         DB db = new DB();
+        List<Integer> ls = new ArrayList<>();
         try {
-            PreparedStatement deleteStatement = db.connection.prepareStatement("delete from product where productId = ?");
-            deleteStatement.setInt(1, productId);
-            status = deleteStatement.executeUpdate();
-            deleteStatement.close();
+            PreparedStatement list = db.connection.prepareStatement("select productId from product");
+            ResultSet rsList = list.executeQuery();
+            while (rsList.next()) {
+                ls.add(rsList.getInt("productId"));
+            }
+            if (ls.contains(productId)) {
+                PreparedStatement deleteStatement = db.connection.prepareStatement("delete from product where productId = ?");
+                deleteStatement.setInt(1, productId);
+                deleteStatement.executeUpdate();
+                deleteStatement.close();
+            } else {
+                System.out.println("Product is not found");
+            }
             db.connection.close();
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
-        return status;
     }
 
     //Soru --> productUpdate() metodunu yazınız ve veritabanından bir veriyi güncelleyiniz.
-    public static void productUpdate(int productId, int price){
+    public static void productUpdate(int productId, int price) {
         DB db = new DB();
+        List ls = new ArrayList();
         try {
-            PreparedStatement updateStatement = db.connection.prepareStatement("update product set price= ? where productId = ?");
-            updateStatement.setInt(1, price);
-            updateStatement.setInt(2, productId);
-            updateStatement.executeUpdate();
-            System.out.println("Update metodu çalıştı");
-            updateStatement.close();
-            db.connection.close();
+            PreparedStatement list = db.connection.prepareStatement("select productId from product");
+            ResultSet rsList = list.executeQuery();
+            while (rsList.next()) {
+                ls.add(rsList.getInt("productId"));
+            }
+            if (ls.contains(productId)) {
+                PreparedStatement updateStatement = db.connection.prepareStatement("update product set price= ? where productId = ?");
+
+                updateStatement.setInt(1, price);
+                updateStatement.setInt(2, productId);
+                updateStatement.executeUpdate();
+                updateStatement.close();
+
+                db.connection.close();
+            }
+            else{
+                System.out.println("Product is not found");
+            }
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
