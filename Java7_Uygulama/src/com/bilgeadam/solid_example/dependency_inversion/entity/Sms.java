@@ -1,6 +1,8 @@
-package com.bilgeadam.solid_example.dependency_inversion;
+package com.bilgeadam.solid_example.dependency_inversion.entity;
 
-public class Sms implements Message{
+import com.bilgeadam.solid_example.dependency_inversion.Message;
+
+public class Sms implements Message {
 	
 	public static String smsString;
 	

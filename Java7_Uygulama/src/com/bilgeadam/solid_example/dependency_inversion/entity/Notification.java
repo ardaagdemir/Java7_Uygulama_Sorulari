@@ -1,5 +1,7 @@
-package com.bilgeadam.solid_example.dependency_inversion;
+package com.bilgeadam.solid_example.dependency_inversion.entity;
 
+
+import com.bilgeadam.solid_example.dependency_inversion.Message;
 
 public class Notification {
 

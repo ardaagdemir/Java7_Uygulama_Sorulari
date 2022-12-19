@@ -13,16 +13,28 @@ public class Main {
         //Bütün productları getir
         //getAllProducts();
 
-        /*Product ekle
-        Product product1 = new Product(null, "Kılıfı", "Elektronik", 80, "Telefon");
-        productInsert(product1);*/
-        //productInsert("Telefon Kılıfı", "Elektronik", 70, "Telefon");
+        //Product ekle
+        //productInsert("Kılıfı", "Elektronik", 80, "Telefon");
 
         //Product sil
         //productDelete(8);
 
         //Product update
-        productUpdate(5, 1300);
+        //productUpdate(5, 1300);
+
+        //Product id sorgusu
+        //productById(8);
+
+        Product product1 = new Product(null, "Kılıfı", "Elektronik", 80, "Telefon");
+        Product product2 = new Product(null, "Kılıfı", "Moda", 90, "Telefon");
+        Product product3 = new Product(null, "Kılıfı", "Spor&Outdoor", 100, "Telefon");
+        Product product4 = new Product(null, "Kılıfı", "Elektronik", 110, "Telefon");
+        List<Product> productList = new ArrayList<>();
+        productList.add(product1);
+        productList.add(product2);
+        productList.add(product3);
+        productList.add(product4);
+        insertAll(productList);
     }
 
     public static void getAllProducts() {
@@ -109,11 +121,10 @@ public class Main {
             System.out.println(e.getMessage());
         }
     }
-
     //Soru --> productUpdate() metodunu yazınız ve veritabanından bir veriyi güncelleyiniz.
     public static void productUpdate(int productId, int price) {
         DB db = new DB();
-        List ls = new ArrayList();
+        List<Integer> ls = new ArrayList();
         try {
             PreparedStatement list = db.connection.prepareStatement("select productId from product");
             ResultSet rsList = list.executeQuery();
@@ -139,6 +150,74 @@ public class Main {
     }
 
     //Soru --> productById() metodunu yazınız ve ilgili id'ye sahip productın bütün özelliklerini gösteriniz.
+    public static void productById(int productID){
+        DB db = new DB();
+        List<Integer> ls = new ArrayList<>();
+        Product product = null;
+        try {
+            PreparedStatement list = db.connection.prepareStatement("select productId from product");
+            ResultSet rsList = list.executeQuery();
+            while (rsList.next()) {
+                ls.add(rsList.getInt("productId"));
+            }
+            ls.forEach(item -> System.out.println(item));
+            if(ls.contains(productID)){
+                PreparedStatement productIdStatement = db.connection.prepareStatement("select * from product where productId=?");
+                productIdStatement.setInt(1, productID);
 
+                ResultSet productIdRs = productIdStatement.executeQuery();
+                while(productIdRs.next()){
+                    Integer productId = productIdRs.getInt("productId");
+                    String productName = productIdRs.getString("productName");
+                    String productCategory = productIdRs.getString("productCategory");
+                    Integer price = productIdRs.getInt("price");
+                    String description = productIdRs.getString("description");
+
+                    product = new Product(productId,productName,productCategory,price,description);
+                    System.out.println(product);
+                }
+                productIdRs.close();
+                db.connection.close();
+           }else {
+                System.out.println("Product is not found");
+            }
+        } catch (Exception e) {
+            System.out.println(e.getMessage() + " -->Error");
+        }
+    }
+
+    //Soru --> insertAll() metodunu yazınız. Birden çok kayıt yapabilen bir metot olacak.
+    //Üretilen birden çok nesneyi tek seferde yazdırabilmeli
+    public static void insertAll(List<Product> products){
+        DB db = new DB();
+        if (products.isEmpty()){
+            System.out.println("List is empty");
+        }else {
+            try{
+                PreparedStatement preparedStatement = db.connection.prepareStatement(
+                        "insert into product(productName, productCategory, price, description) "
+                        +"values(?,?,?,?)");
+                //products.forEach(item -> item.);
+                for(Product item : products) {
+                    preparedStatement.setString(1, item.getProductName());
+                    preparedStatement.setString(2, item.getProductCategory());
+                    preparedStatement.setInt(3, item.getPrice());
+                    preparedStatement.setString(4, item.getDescription());
+                    preparedStatement.executeUpdate();
+                }
+
+                getAllProducts();
+                preparedStatement.close();
+                db.connection.close();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+        }
+    }
+
+    //veritabanı adı --> jdbc_join
+    //tabloların ismi products, categories
+    //products --> productId, categoryId, name, price, description
+    //categories --> categoryId, name
 }
 
