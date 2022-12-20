@@ -1,4 +1,4 @@
-package db_connection;
+package entity;
 
 public class Product{
 
