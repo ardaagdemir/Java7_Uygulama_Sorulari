@@ -46,7 +46,7 @@ public class ProductService {
         }
     }
 
-    public void insert(Product product) {
+    public void save(Product product) {
         try {
 
             PreparedStatement insertStatement = db.connection.prepareStatement(
@@ -140,7 +140,7 @@ public class ProductService {
         }
     }
 
-    public void productById(int productID) {
+    public void getById(int productID) {
         try {
             PreparedStatement list = db.connection.prepareStatement("select \"productId\" from products");
             ResultSet rsList = list.executeQuery();

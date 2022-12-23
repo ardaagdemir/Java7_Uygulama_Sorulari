@@ -16,12 +16,12 @@ public class Main {
 
         Product product1 = new Product(null, new Category(3, null), "Termos", 400, "Starbucks");
         Product product2 = new Product( null, new Category(6, null), "Kazak", 1000, "Levi's");
-        //productService.insert(product1);
+        //productService.save(product1);
         //productService.update(product1);
 
         //List<Product> lsProducts = Arrays.asList(product1,product2);
         //productService.saveAll(lsProducts);
         //productService.delete(25);
-        //productService.productById(29);
+        //productService.getById(29);
     }
 }
