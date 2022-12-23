@@ -11,6 +11,9 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
+
+        DB db = new DB();
+        System.out.println(db);
         //Bütün productları getir
         ProductService productService = new ProductService();
         //productService.getAllProducts();
@@ -23,8 +26,8 @@ public class Main {
         //productService.productDelete(8);
 
         //Product update
-        Product product1 = new Product(39, "Kütüphane", "Mobilya", 3000, "Cam kapaklı kütüphane");
-        productService.productUpdate(product1);
+        /*Product product1 = new Product(39, "Kütüphane", "Mobilya", 3000, "Cam kapaklı kütüphane");
+        productService.productUpdate(product1);*/
 
         //Product id sorgusu
         //productService.productById(8);
@@ -40,9 +43,4 @@ public class Main {
         productList.add(product4);
         productService.insertAll(productList);*/
     }
-
-
-
-
 }
-
