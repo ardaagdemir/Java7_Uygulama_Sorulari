@@ -12,7 +12,7 @@ public class Main {
     public static void main(String[] args) {
 
         ProductService productService = new ProductService();
-        //productService.getAll();
+        productService.getAll();
 
         Product product1 = new Product(null, new Category(3, null), "Termos", 400, "Starbucks");
         Product product2 = new Product( null, new Category(6, null), "Kazak", 1000, "Levi's");

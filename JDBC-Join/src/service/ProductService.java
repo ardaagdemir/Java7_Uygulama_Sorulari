@@ -3,6 +3,7 @@ package service;
 import entity.Category;
 import entity.DB;
 import entity.Product;
+import repository.ICrud;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -11,12 +12,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 //getAll, save, saveAll, update, getById, delete
-public class ProductService {
+public class ProductService implements ICrud<Product> {
 
     DB db = new DB();
     Product product;
     List<Object> ls = new ArrayList<>();
 
+    @Override
     public void getAll() {
 
         try {
@@ -45,7 +47,7 @@ public class ProductService {
             throw new RuntimeException(e);
         }
     }
-
+    @Override
     public void save(Product product) {
         try {
 
@@ -67,7 +69,7 @@ public class ProductService {
             throw new RuntimeException(e);
         }
     }
-
+    @Override
     public void update(Product product) {
         try {
             PreparedStatement list = db.connection.prepareStatement("select \"productId\" from products");
@@ -100,7 +102,7 @@ public class ProductService {
 
         }
     }
-
+    @Override
     public void saveAll(List<Product> products){
         if (products.isEmpty()){
             System.out.println("List is empty");
@@ -122,7 +124,7 @@ public class ProductService {
             }
         }
     }
-
+    @Override
     public void delete(int productId) {
         try {
             PreparedStatement list = db.connection.prepareStatement("SELECT \"productId\" FROM products");
@@ -139,7 +141,7 @@ public class ProductService {
             throw new RuntimeException(e);
         }
     }
-
+    @Override
     public void getById(int productID) {
         try {
             PreparedStatement list = db.connection.prepareStatement("select \"productId\" from products");
