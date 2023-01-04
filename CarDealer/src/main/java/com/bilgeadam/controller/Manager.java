@@ -30,13 +30,12 @@ public class Manager {
         String carModel = scanner.nextLine();
 
         System.out.println("Lütfen model yılını yazınız: ");
-        Long modelYear = scanner.nextLong();
+        long modelYear = Long.parseLong(scanner.nextLine());
 
         System.out.println("Lütfen bayi no yazınız: ");
-        Long dealerShipId = scanner.nextLong();
+        long dealerShipId = Long.parseLong(scanner.nextLine());
 
         return new Car(brand, carModel, modelYear, dealerShipId);
-
     }
 
     public void menu(){
@@ -50,7 +49,7 @@ public class Manager {
             System.out.println("4-Araba Sil");
             System.out.println("5-Arabaları Listele");
 
-            input = Integer.parseInt(scanner.nextLine());
+            input = scanner.nextInt();
             switch (input) {
                 case 1:
                     carService.download();
