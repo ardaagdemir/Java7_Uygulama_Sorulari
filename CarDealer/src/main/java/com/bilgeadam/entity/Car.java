@@ -7,6 +7,13 @@ public class Car {
     private long modelYear;
     private long dealerShipId;
 
+    public Car(String brand, String carModel, long modelYear, long dealerShipId) {
+        this.brand = brand;
+        this.carModel = carModel;
+        this.modelYear = modelYear;
+        this.dealerShipId = dealerShipId;
+    }
+
     public Car(long id, String brand, String carModel, long modelYear, long dealerShipId) {
         super();
         this.id = id;
@@ -15,6 +22,7 @@ public class Car {
         this.modelYear = modelYear;
         this.dealerShipId = dealerShipId;
     }
+
 
     public long getId() {
         return id;

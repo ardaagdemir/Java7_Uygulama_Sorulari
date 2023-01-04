@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarRepository implements ICrud<Car>{
-    DBConnection dbConnection;
-    Connection connection;
+    DBConnection dbConnection = new DBConnection();
+    Connection connection = dbConnection.connect();
 
     @Override
     public List<Car> getAll() {
@@ -88,10 +88,25 @@ public class CarRepository implements ICrud<Car>{
                 preparedStatement.setString(2, item.getCarModel());
                 preparedStatement.setLong(3, item.getDealerShipId());
                 preparedStatement.setLong(4, item.getModelYear());
+
+                preparedStatement.executeUpdate();
             }
-            preparedStatement.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public boolean databaseControl(){
+        boolean control = false;
+        String sql = "select id from cars";
+        ResultSet resultSet;
+        try{
+            PreparedStatement preparedStatement = connection.prepareStatement(sql);
+            resultSet = preparedStatement.executeQuery();
+            control = resultSet.next(); //resultSet' in içerisinde değer varsa bunun true dönmesini sağlayacak
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return control;
     }
 }
