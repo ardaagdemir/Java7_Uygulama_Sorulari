@@ -40,6 +40,7 @@ public class Manager {
 
     public void menu(){
         int input = 0;
+        boolean deger = true;
         do {
             System.out.println("0-Çıkış");
             System.out.println("1-Dosyadan Databaseye Verileri Aktarma");
@@ -49,7 +50,9 @@ public class Manager {
             System.out.println("5-Arabaları Listele");
 
             input = Integer.parseInt(scanner.nextLine());
+
             switch (input) {
+
                 case 1:
                     carService.downloadFileToDatabase();
                     break;
@@ -73,6 +76,9 @@ public class Manager {
                     break;
                 case 5:
                     carRepository.getAll().forEach(System.out::println);
+                    break;
+                case 0:
+                    deger = false;
                     break;
             }
             if (input == 0){

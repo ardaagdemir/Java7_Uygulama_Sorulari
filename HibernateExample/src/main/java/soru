@@ -1,0 +1,17 @@
+package hibernateexample1
+
+--> postgresql için pom.xml ve hibernate.cfg.xml için gerekli kodları yazınız
+--> veritabanında bir tane 'hibernate' adında database oluşturunuz
+--> entity, repository, manager package' larını oluşturunuz
+
+entity
+--> user(id, username, password, city, address), veritabanı tablo adı 'users' olacak
+
+repository
+--> ICrud(save, update, delete, findAll=getAll)
+--> UserRepository oluşturunuz ve save metodunun içini doldurunuz
+
+manager
+--> UserManager oluşturunuz içerisine main metodunu yazınız ve gerekli işlemleri yapınız.
+
+//11:20
