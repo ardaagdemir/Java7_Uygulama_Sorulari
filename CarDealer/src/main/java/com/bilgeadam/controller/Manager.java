@@ -22,7 +22,7 @@ public class Manager {
         manager.menu();
     }
 
-    private static Car getCarInformation() {
+    public static Car getCarInformation() {
         System.out.println("Lütfen araba markasını giriniz: ");
         String brand = scanner.nextLine();
 
@@ -40,7 +40,6 @@ public class Manager {
 
     public void menu(){
         int input = 0;
-
         do {
             System.out.println("0-Çıkış");
             System.out.println("1-Dosyadan Databaseye Verileri Aktarma");
@@ -49,13 +48,13 @@ public class Manager {
             System.out.println("4-Araba Sil");
             System.out.println("5-Arabaları Listele");
 
-            input = scanner.nextInt();
+            input = Integer.parseInt(scanner.nextLine());
             switch (input) {
                 case 1:
-                    carService.download();
+                    carService.downloadFileToDatabase();
                     break;
                 case 2:
-                    carService.download();
+                    carService.save();
                     break;
                 case 3:
                     System.out.print("ID: ");
@@ -75,6 +74,9 @@ public class Manager {
                 case 5:
                     carRepository.getAll().forEach(System.out::println);
                     break;
+            }
+            if (input == 0){
+                break;
             }
         }while(true);
     }

@@ -37,14 +37,13 @@ public class CarRepository implements ICrud<Car>{
 
     @Override
     public void save(Car car) {
-        String sql = "insert into cars(\"id\", \"brand\", \"carModel\",\"dealerShipId\",\"modelYear\") values(?,?,?,?,?)";
+        String sql = "insert into cars(\"brand\", \"carModel\",\"dealerShipId\",\"modelYear\") values(?,?,?,?)";
         try {
             PreparedStatement preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.setLong(1, car.getId());
-            preparedStatement.setString(2, car.getBrand());
-            preparedStatement.setString(3, car.getCarModel());
-            preparedStatement.setLong(4, car.getDealerShipId());
-            preparedStatement.setLong(5, car.getModelYear());
+            preparedStatement.setString(1, car.getBrand());
+            preparedStatement.setString(2, car.getCarModel());
+            preparedStatement.setLong(3, car.getDealerShipId());
+            preparedStatement.setLong(4, car.getModelYear());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
