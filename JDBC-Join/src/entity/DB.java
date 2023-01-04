@@ -26,5 +26,4 @@ public class DB {
             throw new RuntimeException(e);
         }
     }
-
 }

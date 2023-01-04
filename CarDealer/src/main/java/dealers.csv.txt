@@ -1,0 +1,30 @@
+1,Torp-Leannon,Germany,Düsseldorf
+2,Swaniawski-Grimes,Germany,Mannheim
+3,Lakin Group,Germany,Berlin
+4,"Funk and Mohr and Muller",Germany,Dresden
+5,McCullough-Dietrich,Italy,Messina
+6,"Feest, Huels and Roob",Germany,Braunschweig
+7,Kozey LLC,Germany,Hamburg
+8,Volkman Inc,Germany,Witzenhausen
+9,Goodwin LLC,Italy,Torino
+10,Kertzmann-Barrows,Germany,Kassel
+11,Mueller and Sons,Germany,Offenbach
+12,Kuhlman O'Keefe and McDermott,Germany,Karlsruhe
+13,Collins-Fay,Germany,Osnabrück
+14,Hagenes Group,Germany,Nürnberg
+15,Johnston-Hammes,Germany,Düsseldorf
+16,Krajcik Inc,Germany,Hamburg Winterhude
+17,Baumbach-Klocko,Germany,Kiel
+18,Douglas-Bashirian,Italy,Milano
+19,Steuber LLC,Germany,Bonn
+20,"Veum, Douglas and Daniel",Italy,Livorno
+21,Breitenberg Inc,Italy,Messina
+22,"Reilly, Bauch and Koch",Germany,Karlsruhe
+23,"Powlowski, Paucek and Daniel",Germany,Berlin
+24,Metz-Mohr,Germany,Rostock
+25,MacGyver Inc,Italy,Torino
+26,King Group,Germany,Berlin
+27,Romaguera-Quitzon,Germany,Nürnberg
+28,Gutmann-Jones,Italy,Messina
+29,Kuhic and Sons,Germany,Ludwigshafen am Rhein
+30,O'Connell-Howe,Italy,Milano

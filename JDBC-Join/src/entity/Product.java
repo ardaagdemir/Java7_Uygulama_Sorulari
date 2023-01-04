@@ -1,5 +1,6 @@
 package entity;
 
+
 public class Product {
 
     private Integer productId;

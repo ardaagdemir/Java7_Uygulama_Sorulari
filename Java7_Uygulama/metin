@@ -1,0 +1,25 @@
+//JRE-JDK nedir?
+
+//Bir Java uygulamasını çalıştırmak için 3 temel araca ihtiyaç duyulur. (JDK, JRE, JVM)
+
+//JDK --> Java Development Kit (Diğer dillerdeki karşılığı SDK(Software Development Kit)) --> İçeriğinde JRE ve JVM vardır.
+//JRE --> Java Runtime Environment --> İçeriğinde JVM vardır.
+//--->classLoader, byte code doğrulayıcı, yorumlayıcı
+
+//JVM --> Java Virtual Machine
+======================================================================================================================================
+//RDBMS --> Relational Database Management System(MySQL, MSSQL, PostreSQL, Oracle, MariaDB....)
+//Doğrudan bir veritabanı değildir(mysql, postgresql gibi..). Veritabanı tablolarının birbiri ile konuşmasını sağlayan,
+süre ve performans açısından avantaj sağlayan bir yaklaşımdır.
+
+======================================================================================================================================
+//ORM --> Object Relational Mapping
+//Backend' de bulunan classların ve özelliklerinin veritabanında bir örneğinin oluşturulması
+//Yani backend' deki class özelliklerinin veritabanı tablosunun sütunlarıyla eşleştirilmesidir.
+
+//ORM --> Hibernate, JPA(Java Persistence API--> 2019 adı değişti Jakarta Persistence API), Ebean, Torque
+//JDBC vs Hibernate
+//JDBC --> Veritabanına erişim için bir standarttır. Doğrudan veritabanına bağlanma ve buna karşı SQL çalıştırmak için kullanılır.
+//Hibernate --> Bu standartı uygulayan bir ORM aracıdır. Class ile veritabanı tablosunu ilişkilendirir(obje düzeyinde ilişkilendirir).
+======================================================================================================================================
+

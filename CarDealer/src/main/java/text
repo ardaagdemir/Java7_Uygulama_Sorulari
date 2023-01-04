@@ -1,0 +1,49 @@
+// entitiy paketi oluşturalım, car ve dealership sınıfları yaratalım
+// Car sınıf --> id, brand, carModel, modelYear, dealerShipId
+// repository paketi oluşturalım, içerisinde Crud işlemleri yapacağımız bir interface olsun.
+// Bu interface'i ilgili classlara implement edelim.
+
+// utility paketi oluşturalım
+// FileUtils, Constant ve DBConnection sınıfı oluşturalım.
+// Constant sınıfında gerekli database bağlantısı için url'ler olmalı ve
+dosya okuma yapılacağından okunacak dosyanın path yolu olmalıdır.(path yolu = "src/main/java/car.csv.txt")
+========================================================================================================================================
+// FileUtils sınıfında readFile() methodu yazalım. Parametre olarak 'String path' alsın ve bize String tipinde bir liste dönsün
+// Okuduğumuz dosyadan gelecek olan string verilerden bir car listesi üretmeliyiz
+ve bu liste ile veritabanına hepsini kaydedebilmeliyiz.
+
+// Daha sonra car tipinde convertToCar(String[] array)' methodu yazalım.
+Burada ise getCarList ile aldığımız verileri bir 'Car' nesnesine array formatında verelim.
+
+// Son olarak 'getCarList(List<String> list) methodunu yazalım. Bu method bir 'car' listesi dönsün.
+Bu liste içerisine eklenecek veriler convertToCar metodu ile ilgili formatta(virgüllerle ayırarak) eklensin.
+--format örneği = listeyi döndünüz ve her elaman 'item' değişkenine atıldı. --> item.split();
+========================================================================================================================================
+// ICrud --> save(Car car), update(Car car, long id), delete(long id), getAll, saveAll(List<Car> car)
+// CarRepository' de ilgili metotları dolduralım.
+
+//CarRepository' de boolean dönüş tipine sahip 'dataBaseControl' adında bir metot yazalım.
+//Bu metot veritabanından gelen 'id' nin olup olmadığını kontrol etsin ve sonucu döndürsün.
+
+// Kullanıcının isteklerine göre bir işlemi seçerek ilerlemesini sağlayacağız.
+	// Bunun için bir menu() metodu oluşturun.
+		0-Çıkış
+		1-Dosyadan databaseye verileri aktarma
+		2-Araba ekle
+		3-Araba güncelle
+		4-Araba Sil
+		5-Arabaları Listele
+		Yukarıdaki aşamalar yazılıp kullanıcının seçmesi istenecek. İşlemler kullanıcının seçtiği sayılara göre yapılacak.(switch-case)
+========================================================================================================================================
+**Dosyadan database' e verileri aktarma ve save işlemleri için 'CarRepository' adında bir class oluşturalım.
+**Araba sil ve arabayı güncelle işlemleri için kullanıcı bir 'id' girmelidir.
+
+1.metot --> Burada downloadFileToDatabase() isimli bir metot olsun ve bu metot içerisine CarRepository'deki saveAll metodunu alsın.
+saveAll metodunun içerisi 'FileUtils' sınıfında okunan verileri kapsamalıdır.
+(doğal olarak kullanıcıdan veri isteme alanında da kullanıcı '1 numarayı seçtiğinde' saveAll değil bu metot kullanılmalıdır.)
+
+2.metot --> Kullanıcı 'araba ekleme' aksiyonunu seçerse bu durumda da CarService class'ına bir save(Car car) metodu oluşturalım.
+ve bu metot içerisine carRepository' deki save() metodunu çağırsın
+ve kullanıcıdan arabanın özelliklerinin istendiği ayrı bir aksiyon(Car tipinde getCarInformation()) buraya parametre olarak verilsin.)
+
+Son olarak Manager sınıfında main metodunu oluşturun ve menu() metodunu burada çağırın.
