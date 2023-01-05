@@ -8,10 +8,11 @@ entity
 --> user(id, username, password, city, address), veritabanı tablo adı 'users' olacak
 
 repository
---> ICrud(save, update, delete, findAll=getAll)
+--> ICrud(save, update, delete(User user), deleteById(id), findAll=getAll, getById)
 --> UserRepository oluşturunuz ve save metodunun içini doldurunuz
 
 manager
 --> UserManager oluşturunuz içerisine main metodunu yazınız ve gerekli işlemleri yapınız.
 
+UserRepository' de oluşturulan metotlar, UserManager'da aynı isimli metot içerisinde çağrıldıktan sonra mainde çağrılsın.
 //11:20
