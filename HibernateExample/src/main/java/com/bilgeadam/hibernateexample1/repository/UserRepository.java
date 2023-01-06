@@ -98,11 +98,32 @@ public class UserRepository implements ICrud<User>{
 
     @Override
     public void delete(User user) {
+        Session session = sessionFactory.openSession();
+        try{
+           session.beginTransaction();
+           session.delete(user);
+           session.getTransaction().commit();
+           System.out.println("Kayıt silindi");
+        }catch (Exception e){
+            if (session.getTransaction() != null){
+                session.getTransaction().rollback();
+            }
+            System.out.println(e.getMessage());
+        }
     }
 
     @Override
-    public User geyById(int id) {
-        return null;
+    public User getById(int id) {
+        Session session = sessionFactory.openSession();
+        User user = null;
+        try{
+            user = session.get(User.class, id);
+        }catch (Exception e){
+            if (session.getTransaction() != null){
+                session.getTransaction().rollback();
+            }
+        }
+        return user;
     }
 
     public void exit() {

@@ -21,20 +21,24 @@ public class User {
     public User() {
     }
 
-    /*public User(String username, String password, String city, String address) {
+    public User(Integer id) {
+        this.id = id;
+    }
+
+    public User(String username, String password, String city, String address) {
         this.username = username;
         this.password = password;
         this.city = city;
         this.address = address;
-    }*/
+    }
 
-    /*public User(Integer id, String username, String password, String city, String address) {
+    public User(Integer id, String username, String password, String city, String address) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.city = city;
         this.address = address;
-    }*/
+    }
 
     public int getId() {
         return id;

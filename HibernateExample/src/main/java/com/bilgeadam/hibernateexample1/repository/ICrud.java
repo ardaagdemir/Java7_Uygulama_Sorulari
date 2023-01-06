@@ -8,5 +8,5 @@ public interface ICrud<T> {
     void deleteById(int id);
     void delete(T t);
     List<T> getAll();
-    T geyById(int id);
+    T getById(int id);
 }
