@@ -41,7 +41,7 @@ public class HibernateUtil {
                  */
                 Properties settings = new Properties();
                 settings.put(Environment.DRIVER, "org.postgresql.Driver");
-                settings.put(Environment.URL, "jdbc:postgresql://localhost:5432/hibernate2");
+                settings.put(Environment.URL, "jdbc:postgresql://localhost:5432/hibernate_ogretmen");
                 settings.put(Environment.USER, "admin");
                 settings.put(Environment.PASS, "arda10021");
 
