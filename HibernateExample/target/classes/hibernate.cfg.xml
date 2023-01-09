@@ -5,17 +5,16 @@
 
 <hibernate-configuration>
     <session-factory>
-        <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
-        <property name="connection.url">jdbc:postgresql://localhost:5432/hibernate</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/hibernate_student</property>
         <property name="connection.username">admin</property>
         <property name="connection.password">arda10021</property>
         <property name="connection.driver_class">org.postgresql.Driver</property>
+
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
+
         <property name="connection.autocommit">false</property>
         <property name="hbm2ddl.auto">update</property>
         <property name="hibernate.enable_lazy_load_no_trans">true</property>
-
-        <mapping class="com.bilgeadam.hibernateexample1.entity.User"/>
     </session-factory>
 </hibernate-configuration>

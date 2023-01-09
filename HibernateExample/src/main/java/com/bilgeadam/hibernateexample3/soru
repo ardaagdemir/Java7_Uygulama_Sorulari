@@ -1,0 +1,19 @@
+
+
+katmanlı mimariye göre projeyi yazınız
+hibernate.cfg.xml ile birlikte HibernateUtil sınıfından bağlantıyı kurunuz.
+
+Bir tane Student class ımız olacak. --> id, firstName, lastName, email, studentNumber
+
+-->hql
+       --> Bu sınıf için save, update, delete metotları 'hql' ile yazılacak.
+       --> öğrenci adı s ile başlayan student' ları gösteriniz
+       --> soyadında t harfi olanları gösteriniz
+       --> öğrenci numarası 10' dan büyük olanlar
+       --> öğrenci numarası iki sayının arasında olanları gösteriniz
+-->namedQuery
+       --> findAll, findById
+-->NativeQuery(pure sql)
+
+-okul, sınıf(lab, ders), dolap, öğrenciler, dolap kitapları
+
