@@ -1,0 +1,21 @@
+
+
+//solid --> //single responsibility priciple
+                //open-closed principle
+                //liskov substitution
+                //interface segregation
+                //dependency inversion principle
+    //design pattern'larla beraber kullanılırlar
+
+    /*oop' de 4 temel yöntem vardır
+        ==Yapısal==
+        --> class
+        --> nesne
+        ==Kavramsal==
+        --> encapsulation(access modifier(public, protected, private, default)
+        public, default yalnızca class düzeyinde erişim belirleyicidir
+        public, protected, private, default hem metot hem de property düzeyinde erişim belirleyicidir.
+        --> inheritence
+        --> polymorphism
+        --> abstraction
+    */
