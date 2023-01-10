@@ -2,6 +2,24 @@ package com.bilgeadam.hibernateexample3.entity;
 
 import javax.persistence.*;
 
+//JPQL(Java Persistance Query Language)
+//HQL(Hibernate Query Language)
+
+/*
+* NamedQuery
+* name --> kullanabilmek için bir isim girilmelidir
+* query --> tabloya yapılacak sorgu yazılır (JPQL, HQL)
+*
+* Avantajı --> NativeSQL ve diğer tiplere göre --> Cache'leme yapmaktadır.
+* Aynı sorgu veritabanında hiçbir değişiklik olmadan gelirse cache' den önceki sorgu sonucunu getirir.
+* Sık değişiklik yapılmayan çok yüksek maliyetli sorgularda tercih edilir.(Aydan aya güncellenen tablolar)
+* Ancak her gün güncellenen verilerde kullanılmaz. Yani özel durumlarda kullanılır.
+*/
+
+@NamedQueries({
+        @NamedQuery(name = "Student.findAll", query = "Select s From Student s"), //JPQL yazım biçimidir
+        @NamedQuery(name = "Student.findById", query = "Select s From Student s where s.id = :id")
+})
 @Entity
 @Table(name = "student")
 public class Student {
