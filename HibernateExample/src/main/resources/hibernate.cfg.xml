@@ -5,7 +5,7 @@
 
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:postgresql://localhost:5432/hibernate_student</property>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/hibernate_school</property>
         <property name="connection.username">admin</property>
         <property name="connection.password">arda10021</property>
         <property name="connection.driver_class">org.postgresql.Driver</property>

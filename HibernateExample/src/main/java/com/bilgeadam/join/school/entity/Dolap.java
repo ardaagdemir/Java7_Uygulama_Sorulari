@@ -31,4 +31,12 @@ public class Dolap {
     public void setDolapNo(String dolapNo) {
         this.dolapNo = dolapNo;
     }
+
+    @Override
+    public String toString() {
+        return "Dolap{" +
+                "id=" + id +
+                ", dolapNo='" + dolapNo + '\'' +
+                '}';
+    }
 }
