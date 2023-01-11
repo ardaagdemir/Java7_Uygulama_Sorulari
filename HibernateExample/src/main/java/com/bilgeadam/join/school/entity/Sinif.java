@@ -3,19 +3,22 @@ package com.bilgeadam.join.school.entity;
 import javax.persistence.*;
 
 @Entity
-public class Bilgisayar {
+public class Sinif {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String name;
+    private String lokasyon;
 
     //OneToOne --> kişi ve tc kimlik no, sinif ve tahta, bilgisayar ve mac adresi, araba ve ruhsat, araba ve plaka
-
+    //CascadeType.ALL --> Bunun sayesinde constructor' da bulunan Lab nesnesi direkt olarak kendi veri tabanında oluşturulmuş olur.
+    //Tekrar bir lab nesnesi oluşturup bunu ayrıca veri tabanına eklemeye gerek kalmaz.
     @OneToOne(cascade = CascadeType.ALL)
-    private MacAddress macAddress;
+    private Lab lab;
 
+    @ManyToOne()
+    private Okul okul;
     /*
     * PERSIST
     * Kaydedilen nesnenin ilişkili nesnesini de kaydeder.
@@ -33,4 +36,8 @@ public class Bilgisayar {
     * Yukarıdaki bütün işlemler bir arada yapılır.
     * */
 
+    public Sinif(String lokasyon, Lab lab) {
+        this.lokasyon = lokasyon;
+        this.lab = lab;
+    }
 }
