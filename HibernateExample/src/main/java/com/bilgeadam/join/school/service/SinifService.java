@@ -6,6 +6,8 @@ import com.bilgeadam.join.school.entity.Okul;
 import com.bilgeadam.join.school.entity.Sinif;
 import com.bilgeadam.join.school.repository.OkulDao;
 import com.bilgeadam.join.school.repository.SinifDao;
+
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,8 +16,9 @@ public class SinifService {
     private static OkulDao okulDao = new OkulDao();
 
     public static void main(String[] args) {
-        saveSinif();
+        //saveSinif();
         //saveOkul();
+        getAll();
     }
 
     public static void saveSinif(){
@@ -55,5 +58,9 @@ public class SinifService {
         Okul okul1 = new Okul("okul adi", sinifListesi);
 
         okulDao.save(okul1);
+    }
+
+    public static void getAll(){
+        sinifDao.getAll();
     }
 }

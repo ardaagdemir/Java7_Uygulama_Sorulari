@@ -9,7 +9,7 @@ public class Sinif {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String lokasyon;
+    private String sinifLokasyon;
 
     //OneToOne --> kişi ve tc kimlik no, sinif ve tahta, bilgisayar ve mac adresi, araba ve ruhsat, araba ve plaka
     //CascadeType.ALL --> Bunun sayesinde constructor' da bulunan Lab nesnesi direkt olarak kendi veri tabanında oluşturulmuş olur.
@@ -50,15 +50,15 @@ public class Sinif {
     public Sinif() {
     }
 
-    public Sinif(String lokasyon, Lab lab, Okul okul, List<Dolap> dolaplar) {
-        this.lokasyon = lokasyon;
+    public Sinif(String sinifLokasyon, Lab lab, Okul okul, List<Dolap> dolaplar) {
+        this.sinifLokasyon = sinifLokasyon;
         this.lab = lab;
         this.okul = okul;
         this.dolaplar = dolaplar;
     }
 
-    public Sinif(String lokasyon, Lab lab, List<Dolap> dolaplar) {
-        this.lokasyon = lokasyon;
+    public Sinif(String sinifLokasyon, Lab lab, List<Dolap> dolaplar) {
+        this.sinifLokasyon = sinifLokasyon;
         this.lab = lab;
         this.dolaplar = dolaplar;
     }
@@ -72,11 +72,11 @@ public class Sinif {
     }
 
     public String getLokasyon() {
-        return lokasyon;
+        return sinifLokasyon;
     }
 
     public void setLokasyon(String lokasyon) {
-        this.lokasyon = lokasyon;
+        this.sinifLokasyon = lokasyon;
     }
 
     public Lab getLab() {
@@ -106,7 +106,7 @@ public class Sinif {
     public String toString() {
         return "Sinif{" +
                 "id=" + id +
-                ", lokasyon='" + lokasyon + '\'' +
+                ", lokasyon='" + sinifLokasyon + '\'' +
                 ", lab=" + lab +
                 ", okul=" + okul +
                 ", dolaplar=" + dolaplar +

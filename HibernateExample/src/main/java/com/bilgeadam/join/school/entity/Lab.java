@@ -11,13 +11,13 @@ public class Lab {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int labId;
-    private String lokasyon;
+    private String labLokasyon;
 
     public Lab() {
     }
 
-    public Lab(String lokasyon) {
-        this.lokasyon = lokasyon;
+    public Lab(String labLokasyon) {
+        this.labLokasyon = labLokasyon;
     }
 
     public int getLabId() {
@@ -29,18 +29,18 @@ public class Lab {
     }
 
     public String getLokasyon() {
-        return lokasyon;
+        return labLokasyon;
     }
 
     public void setLokasyon(String lokasyon) {
-        this.lokasyon = lokasyon;
+        this.labLokasyon = lokasyon;
     }
 
     @Override
     public String toString() {
         return "Lab{" +
                 "labId=" + labId +
-                ", lokasyon='" + lokasyon + '\'' +
+                ", lokasyon='" + labLokasyon + '\'' +
                 '}';
     }
 }
