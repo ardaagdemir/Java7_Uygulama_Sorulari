@@ -16,8 +16,7 @@ public class Lab {
     public Lab() {
     }
 
-    public Lab(int labId, String lokasyon) {
-        this.labId = labId;
+    public Lab(String lokasyon) {
         this.lokasyon = lokasyon;
     }
 

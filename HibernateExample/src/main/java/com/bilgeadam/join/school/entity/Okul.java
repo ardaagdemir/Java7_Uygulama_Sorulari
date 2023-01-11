@@ -18,7 +18,7 @@ public class Okul {
     // Yani bir nesne örneğinin gerçekten ihtiyaç duyulacağı ana kadar alınmaması ve bekletilmesi amacıyla kullanılır.
 
     //EAGER --> Lazy' nin tam tersi çalışır. Kullanılacak nesneleri, önceden yaratır ve sorgu çalıştırıldığında verilerin aynı anda yüklenmesini sağlar.
-    @OneToMany(fetch = FetchType.EAGER, mappedBy = "okul")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "okul")
     //mappedBy --> M:1(M2O) - 1:M ilişkilerde genellikle bu ilişkiyi yöneten taraf 1:M tarafı olduğu için burada 1:M' ye mapped olarak nesnesi verilir.
     //mappedBy --> M:1 dışında diğer bütün tiplerde kullanılır.Yönetici sınıfta mutlaka tanımlanmalıdır yoksa program hata verir.
     //mappedBy kullanılmazsa ilişki her iki taraftan da yönetilebilir.
@@ -29,6 +29,11 @@ public class Okul {
 
     public Okul(String okulAdi) {
         this.okulAdi = okulAdi;
+    }
+
+    public Okul(String okulAdi, List<Sinif> siniflar) {
+        this.okulAdi = okulAdi;
+        this.siniflar = siniflar;
     }
 
     public Integer getId() {

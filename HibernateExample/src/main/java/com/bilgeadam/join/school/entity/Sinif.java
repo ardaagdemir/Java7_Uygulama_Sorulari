@@ -18,9 +18,17 @@ public class Sinif {
     private Lab lab;
 
     @ManyToOne(cascade = CascadeType.ALL)
+    @JoinTable(name = "sinif_okul",
+                joinColumns = @JoinColumn(name = "sinif_id"),
+                inverseJoinColumns = @JoinColumn(name = "okul_id"))
     private Okul okul;
 
-    @OneToMany
+    //sınıf
+    //lab
+    //dolap
+    //okul --> sınıf --> lab,dolap
+
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Dolap> dolaplar;
     /*
     * PERSIST
@@ -46,6 +54,12 @@ public class Sinif {
         this.lokasyon = lokasyon;
         this.lab = lab;
         this.okul = okul;
+        this.dolaplar = dolaplar;
+    }
+
+    public Sinif(String lokasyon, Lab lab, List<Dolap> dolaplar) {
+        this.lokasyon = lokasyon;
+        this.lab = lab;
         this.dolaplar = dolaplar;
     }
 
@@ -80,7 +94,6 @@ public class Sinif {
     public void setOkul(Okul okul) {
         this.okul = okul;
     }
-
     public List<Dolap> getDolaplar() {
         return dolaplar;
     }
