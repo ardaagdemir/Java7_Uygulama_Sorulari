@@ -17,8 +17,8 @@ public class Sinif {
     @OneToOne(cascade = CascadeType.ALL)
     private Lab lab;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<Dolap> dolap;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Dolap> dolaplar;
 
     @ManyToOne(cascade = CascadeType.ALL)
     private Okul okul;
@@ -27,10 +27,10 @@ public class Sinif {
     public Sinif() {
     }
 
-    public Sinif(String sinifLokasyon, Lab lab, List<Dolap> dolap, Okul okul) {
+    public Sinif(String sinifLokasyon, Lab lab, List<Dolap> dolaplar, Okul okul) {
         this.sinifLokasyon = sinifLokasyon;
         this.lab = lab;
-        this.dolap = dolap;
+        this.dolaplar = dolaplar;
         this.okul = okul;
     }
 
@@ -59,11 +59,11 @@ public class Sinif {
     }
 
     public List<Dolap> getDolap() {
-        return dolap;
+        return dolaplar;
     }
 
     public void setDolap(List<Dolap> dolap) {
-        this.dolap = dolap;
+        this.dolaplar = dolap;
     }
 
     public Okul getOkul() {
@@ -80,7 +80,7 @@ public class Sinif {
                 "id=" + id +
                 ", sinifLokasyon='" + sinifLokasyon + '\'' +
                 ", lab=" + lab +
-                ", dolap=" + dolap +
+                ", dolap=" + dolaplar +
                 ", okul=" + okul +
                 '}';
     }

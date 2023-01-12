@@ -10,7 +10,8 @@ import java.util.Arrays;
 
 public class SinifService {
     public static void main(String[] args) {
-        save();
+        //save();
+        getAll();
     }
 
     private static SinifDao sinifDao = new SinifDao();
@@ -26,5 +27,9 @@ public class SinifService {
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    public static void getAll(){
+        sinifDao.getAll();
     }
 }
