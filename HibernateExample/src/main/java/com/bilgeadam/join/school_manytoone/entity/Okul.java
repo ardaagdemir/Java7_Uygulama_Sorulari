@@ -1,9 +1,6 @@
 package com.bilgeadam.join.school_manytoone.entity;
 
-import com.bilgeadam.join.school.entity.Sinif;
-
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 public class Okul {

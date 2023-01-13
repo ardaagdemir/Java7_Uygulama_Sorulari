@@ -5,16 +5,15 @@
 
 <hibernate-configuration>
     <session-factory>
-        <property name="connection.url">jdbc:postgresql://localhost:5432/hibernate_school?currentSchema=student_manytomany</property>
-        <property name="connection.username">admin</property>
-        <property name="connection.password">arda10021</property>
-        <property name="connection.driver_class">org.postgresql.Driver</property>
-
+        <property name="connection.url">jdbc:mysql://localhost/library_management</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password"></property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
 
         <property name="connection.autocommit">false</property>
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
         <property name="hibernate.enable_lazy_load_no_trans">true</property>
     </session-factory>
 </hibernate-configuration>

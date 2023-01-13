@@ -1,0 +1,115 @@
+package com.bilgeadam.join.school_alljoin.entity;
+
+import javax.persistence.*;
+import java.util.List;
+
+@Entity
+public class Sinif {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String sinifLokasyon;
+
+    //OneToOne --> kişi ve tc kimlik no, sinif ve tahta, bilgisayar ve mac adresi, araba ve ruhsat, araba ve plaka
+    //CascadeType.ALL --> Bunun sayesinde constructor' da bulunan Lab nesnesi direkt olarak kendi veri tabanında oluşturulmuş olur.
+    //Tekrar bir lab nesnesi oluşturup bunu ayrıca veri tabanına eklemeye gerek kalmaz.
+    @OneToOne(cascade = CascadeType.ALL)
+    private Lab lab;
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinTable(name = "sinif_okul",
+                joinColumns = @JoinColumn(name = "sinif_id"),
+                inverseJoinColumns = @JoinColumn(name = "okul_id"))
+    private Okul okul;
+
+    //sınıf
+    //lab
+    //dolap
+    //okul --> sınıf --> lab,dolap
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Dolap> dolaplar;
+    /*
+    * PERSIST
+    * Kaydedilen nesnenin ilişkili nesnesini de kaydeder.
+    *
+    * MERGE
+    * Nesne 'merge' edilirse ilişkili olduğu nesne de 'merge' edilir.
+    *
+    * REMOVE
+    * Nesne silinirse ilişkili olan nesne de silinir.
+    *
+    * REFRESH
+    * Nesne yenilirse bağlı olan nesne de yenilenir.
+    *
+    * ALL
+    * Yukarıdaki bütün işlemler bir arada yapılır.
+    * */
+
+    public Sinif() {
+    }
+
+    public Sinif(String sinifLokasyon, Lab lab, Okul okul, List<Dolap> dolaplar) {
+        this.sinifLokasyon = sinifLokasyon;
+        this.lab = lab;
+        this.okul = okul;
+        this.dolaplar = dolaplar;
+    }
+
+    public Sinif(String sinifLokasyon, Lab lab, List<Dolap> dolaplar) {
+        this.sinifLokasyon = sinifLokasyon;
+        this.lab = lab;
+        this.dolaplar = dolaplar;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getLokasyon() {
+        return sinifLokasyon;
+    }
+
+    public void setLokasyon(String lokasyon) {
+        this.sinifLokasyon = lokasyon;
+    }
+
+    public Lab getLab() {
+        return lab;
+    }
+
+    public void setLab(Lab lab) {
+        this.lab = lab;
+    }
+
+    public Okul getOkul() {
+        return okul;
+    }
+
+    public void setOkul(Okul okul) {
+        this.okul = okul;
+    }
+    public List<Dolap> getDolaplar() {
+        return dolaplar;
+    }
+
+    public void setDolaplar(List<Dolap> dolaplar) {
+        this.dolaplar = dolaplar;
+    }
+
+    @Override
+    public String toString() {
+        return "Sinif{" +
+                "id=" + id +
+                ", lokasyon='" + sinifLokasyon + '\'' +
+                ", lab=" + lab +
+                ", okul=" + okul +
+                ", dolaplar=" + dolaplar +
+                '}';
+    }
+}
