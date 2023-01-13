@@ -12,7 +12,8 @@ import java.util.Arrays;
 public class BookService {
 
     public static void main(String[] args) {
-        save();
+        //save();
+        getAll();
     }
 
     static BookDao bookDao = new BookDao();
@@ -26,6 +27,14 @@ public class BookService {
 
         try{
             bookDao.save(book1);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void getAll(){
+        try{
+            bookDao.getAll();
         }catch (Exception e){
             e.printStackTrace();
         }
