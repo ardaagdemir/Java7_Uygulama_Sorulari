@@ -14,6 +14,7 @@ public class BookService {
     public static void main(String[] args) {
         //save();
         getAll();
+        getById(2);
     }
 
     static BookDao bookDao = new BookDao();
@@ -40,4 +41,7 @@ public class BookService {
         }
     }
 
+    public static void getById(int id){
+        bookDao.getById(id);
+    }
 }

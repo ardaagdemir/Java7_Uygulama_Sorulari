@@ -50,4 +50,22 @@ public class BookDao {
             e.printStackTrace();
         }
     }
+
+    //getAll2' u hibernate metotlarını kullanarak uygulayınız
+
+    public void getById(int id){
+        try {
+            Session session = HibernateUtil.getSessionFactory().openSession();
+            Book book = session.load(Book.class, id);
+            System.out.println(book);
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    public void getByIdFromNativeQuery(int id){
+
+
+    }
 }

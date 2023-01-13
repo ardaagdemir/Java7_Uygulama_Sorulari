@@ -1,0 +1,30 @@
+bir kütüpane senaryosu kuracağız
+entity--> Book, Author, BookDetail, User
+--> bir kişi birden çok kitap alabilir aynı zmanda kütüphanenin kayıt sisteminde kitabın
+bugüne kadar kimlerin aldığı görüntülenebilir
+--> kitaplar sisteme eklenirken mutlaka yazarı, detayları, isim, ve kimin aldığı belirtilmelidir
+--> sisteme eklenen veya kişilere verilen kitapların durumları hakkında bilgiler yer almaktadır
+
+Book -->
+bookName, author, detail, user
+
+Author -->
+firstname, lastname, books
+
+BookDetails -->
+title(katıt açarken girilen metin mesela satan çalışan ismi gibi), price, bookDescription
+
+User-->
+fullName, Gender, age, meritalStatus
+
+bu classları kullanarak gereklilişkileri kurunuz ve konsolda gösteriniz.
+veritabanı library_management adında bir db oluşturunuz.
+kodları yazarken lombok kütüphanesinden yararlanınız.
+
+kayıt sistemine ekle sil getir crudları al
+-Kayıt sisteminde ekleme, görüntüleme, silme ve güncelleme işlemlerini yapınız.
+--> getAll() --> kitabı alan kişi, kitap ismi, yazar ismi, kitap detayı
+
+Kitaba göre kitabı kimlerin aldığını ve yazarı konsola yazdırınız.
+
+-Kitap adına göre arama yapıp ilgili özellikleri konsola yazdırınız.
