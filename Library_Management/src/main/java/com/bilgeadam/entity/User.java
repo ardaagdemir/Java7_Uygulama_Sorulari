@@ -33,4 +33,12 @@ public class User {
         this.userGender = userGender;
         this.maritalStatus = maritalStatus;
     }
+
+    public User(Integer id, String fullName, String age, EUserGender userGender, String maritalStatus) {
+        this.id = id;
+        this.fullName = fullName;
+        this.age = age;
+        this.userGender = userGender;
+        this.maritalStatus = maritalStatus;
+    }
 }

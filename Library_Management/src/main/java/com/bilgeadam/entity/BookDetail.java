@@ -27,4 +27,11 @@ public class BookDetail {
         this.bookDescription = bookDescription;
         this.bookPrice = bookPrice;
     }
+
+    public BookDetail(Integer id, String bookType, String bookDescription, double bookPrice) {
+        this.id = id;
+        this.bookType = bookType;
+        this.bookDescription = bookDescription;
+        this.bookPrice = bookPrice;
+    }
 }
