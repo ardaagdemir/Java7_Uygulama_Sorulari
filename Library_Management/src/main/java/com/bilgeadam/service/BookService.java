@@ -12,24 +12,25 @@ import java.util.Arrays;
 public class BookService {
 
     public static void main(String[] args) {
-        //save();
+        save();
         //getAll();
         //getById(1);
         //getByIdFromNativeQuery(2);
         //getByIdFromNativeQuery2(1);
         //update();
-        //delete(3);
+        delete(5);
+        //delete2();
+        //getByName("geleceği");
     }
 
     static BookDao bookDao = new BookDao();
     public static void save(){
-        BookDetail bookDetail = new BookDetail("History", "The book is wonderful!", 120);
-        User user1 = new User("Tunç Cenk Ergüven", "26", EUserGender.MALE, "Single");
-        User user2 = new User("Emre Kazancı", "45", EUserGender.MALE, "Single");
+        BookDetail bookDetail = new BookDetail("Science", "", 60);
+        User user1 = new User("Mücahit Doğan", "26", EUserGender.FEMALE, "Single");
 
-        Author author = new Author("James", "Clean");
+        Author author = new Author(1,"Carl", "Sagan");
 
-        Book book1 = new Book("Atomik Alışkanlıklar", author, bookDetail, Arrays.asList(user1, user2));
+        Book book1 = new Book("Deneme3", author, bookDetail, Arrays.asList(user1));
 
         try{
             bookDao.save(book1);
@@ -68,6 +69,27 @@ public class BookService {
     }
     public static void delete(int id){
         bookDao.delete(id);
+    }
+    public static void delete2(){
+        try {
+            BookDetail bookDetail = new BookDetail(3);
+            User user1 = new User(3);
+
+            Author author = new Author(1,"Carl", "Sagan");
+
+            Book book1 = new Book(3, author, bookDetail, Arrays.asList(user1));
+
+            bookDao.delete2(book1);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    public static void getByName(String word){
+        try {
+            bookDao.getByName(word);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
 }

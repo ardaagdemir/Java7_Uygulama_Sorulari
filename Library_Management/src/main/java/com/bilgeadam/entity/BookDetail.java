@@ -22,6 +22,10 @@ public class BookDetail {
     /*@OneToOne(cascade = CascadeType.ALL, mappedBy = "bookDetail")
     private Book book;*/
 
+    public BookDetail(Integer id) {
+        this.id = id;
+    }
+
     public BookDetail(String bookType, String bookDescription, double bookPrice) {
         this.bookType = bookType;
         this.bookDescription = bookDescription;

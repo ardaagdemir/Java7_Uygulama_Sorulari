@@ -13,7 +13,6 @@ import java.util.List;
 public class Author {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     private String firstName;
@@ -22,6 +21,10 @@ public class Author {
     //Uygulamayı yazar tarafından da yöneten arkadaşlar olduğu için burada tanımladık. Aksi halde tanımlamaya gerek yoktur.
     /*@OneToMany(cascade = CascadeType.ALL, mappedBy = "author")
     private List<Book> bookList;*/
+
+    public Author(Integer id) {
+        this.id = id;
+    }
 
     public Author(String firstName, String lastName) {
         this.firstName = firstName;

@@ -27,6 +27,10 @@ public class User {
     /*@ManyToMany(mappedBy = "userList")
     public List<Book> books;*/
 
+    public User(Integer id) {
+        this.id = id;
+    }
+
     public User(String fullName, String age, EUserGender userGender, String maritalStatus) {
         this.fullName = fullName;
         this.age = age;

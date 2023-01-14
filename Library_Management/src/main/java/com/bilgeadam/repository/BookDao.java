@@ -159,4 +159,48 @@ public class BookDao {
         }
     }
 
+    public void delete2(Book book){
+        try {
+            Session session = HibernateUtil.getSessionFactory().openSession();
+            session.getTransaction().begin();
+            session.delete(book);
+            session.getTransaction().commit();
+            System.out.println("Book is deleted");
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+            e.getCause();
+        }
+    }
+
+    public void getByName(String word){
+        EntityManager entityManager = HibernateUtil.getSessionFactory().createEntityManager();
+        String sql = "select b.id, b.bookname, a.firstName, a.lastName, bd.bookDescription, bd.bookPrice, bd.bookType, u.fullName, u.maritalStatus, u.userGender \n" +
+                "                    from book as b \n" +
+                "                    inner join author as a ON a.id = b.author_id\n" +
+                "                    inner join bookdetail as bd ON bd.id = b.bookDetail_id\n" +
+                "                     inner join book_user as bu on b.id = bu.book_id\n" +
+                "inner join user as u on bu.userList_id = u.id where b.bookname like ?";
+        try {
+            Query query = entityManager.createNativeQuery(sql);
+            query.setParameter(1, "%" + word+ "%"); //%word%
+            List<Object[]> array = query.getResultList();
+            for(Object[] item : array){
+                System.out.println("ID: " + item[0] + " --"
+                        + " Book Name: " + item[1] + " --"
+                        + " Name: " + item[2] + " " + item[3] + " --"
+                        + " Description: " + item[4] + " --"
+                        + " Price: " + item[5] + " --"
+                        + " Book Type: " + item[6] + " --"
+                        + " User Name: " + item[7] + " --"
+                        + " Marital Status: " + item[8] + " --"
+                        + " Gender: " + item[9]
+                );
+            }
+        }catch (Exception e){
+            e.getMessage();
+            e.printStackTrace();
+        }
+    }
+
 }
