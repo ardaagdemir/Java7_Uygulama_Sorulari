@@ -28,6 +28,12 @@ public class Book {
     @ManyToMany(cascade = CascadeType.ALL)
     private List<User> userList;
 
+    public Book(String bookName, BookDetail bookDetail, List<User> userList) {
+        this.bookName = bookName;
+        this.bookDetail = bookDetail;
+        this.userList = userList;
+    }
+
     public Book(Integer id, Author author, BookDetail bookDetail, List<User> userList) {
         this.id = id;
         this.author = author;

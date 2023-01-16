@@ -9,16 +9,17 @@ import com.bilgeadam.utils.EUserGender;
 
 import java.util.Arrays;
 
+
 public class BookService {
 
     public static void main(String[] args) {
-        save();
+        //save();
         //getAll();
         //getById(1);
         //getByIdFromNativeQuery(2);
         //getByIdFromNativeQuery2(1);
         //update();
-        delete(5);
+        //delete(5);
         //delete2();
         //getByName("geleceği");
     }
@@ -26,11 +27,11 @@ public class BookService {
     static BookDao bookDao = new BookDao();
     public static void save(){
         BookDetail bookDetail = new BookDetail("Science", "", 60);
-        User user1 = new User("Mücahit Doğan", "26", EUserGender.FEMALE, "Single");
+        User user1 = new User("Arda", "26", EUserGender.FEMALE, "Single");
 
         Author author = new Author(1,"Carl", "Sagan");
 
-        Book book1 = new Book("Deneme3", author, bookDetail, Arrays.asList(user1));
+        Book book1 = new Book("Kozmos", author, bookDetail, Arrays.asList(user1));
 
         try{
             bookDao.save(book1);
