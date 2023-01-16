@@ -30,6 +30,19 @@ public class Main {
         teamManager.earningStatus(team2);
         teamManager.earningStatus(team3);
         teamManager.earningStatus(team4);
+        System.out.println("-------------------------------------------------------------------------------");
+
+        Team[] teams = new Team[4];
+        teams[0] = team1;
+        teams[1] = team2;
+        teams[2] = team3;
+        teams[3] = team4;
+
+        teamManager.pointStatus(teams);
+        System.out.println("--------------------------------------------------------------------------------");
+        teamManager.bankruptStatus(teams);
+        System.out.println("--------------------------------------------------------------------------------");
+        teamManager.champion3(teams);
 
     }
 }
