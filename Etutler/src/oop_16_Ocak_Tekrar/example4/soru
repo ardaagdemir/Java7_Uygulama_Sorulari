@@ -1,0 +1,24 @@
+
+Oyuncu adında bir class yazın.
+-İçerisinde ad, formaNo, dayanıklılık, hız, pas, şut, yetenek, kararlılık, doğalForm, sans, ve bulundukları takım yer almalıdır.
+-Bu özellikler en az 50 puan en fazla 101 olabilir.
+-Bu özelliklerin puanlarını oluşturmak için random sınıfı kullanılmalıdır.(oyuncu classında)(özellik = 50 + random)
+-Oyuncunun adı ve forma numarası mutlaka girilmelidir.
+
+-Defans oyuncusu adında bir class oluşturunuz. İçerisinde pozisyonAlma, kafa, sıçrama gibi özellikler olmalıdır.
+-Orta saha oyuncusu adında bir class oluşturunuz. İçerisinde uzunTop, ilkDokunuş, topSürme, üretkenlik, özelYetenek gibi özellikler..
+-Forvet oyuncusu adında bir class oluşturunuz. İçerisinde bitiricilik, ilkDokunuş, kafa, özelYetenek gibi özellikler olmalıdır.
+-Kaleci adında bir class oluşturunuz. İçerisinde kurtarış özelliği olmalıdır.
+
+-Defans, ortasaha, forvet oyuncusunun ve kalecinin adını ve forma numarasını yazmak zorunludur.
+-Bu sınıfların özellikleri en az 50 en çok 101 olabilir.
+
+--> Takım adında bir class oluşturunuz. İçerisine takımİsmi, kaleci ve oyuncuları özellik olarak alsın.
+--> Takım oluşturulduğunda ismini yazmak zorunludur.
+
+-->defansOluştur, ortaSahaOluştur, forvetOluştur, kaleci oluştur adında metotlar yazınız. Bu metotlar ilgili oyuncuları oluşturup
+   takıma eklemelidir. Defans için-->4 , orta saha oyuncusu için --> 4, forvet için --> 2 ve bir de kaleci olacak.
+   (oyuncuların adları ve forma numaraları örneği --> OrtaSaha1, 6  veya OrtaSaha2, 7)
+   (kalecinin forma numarası 1' dir.)
+
+   Bir main sınıfı oluşturup bu takıma ait özelliklerin yazdığı çıktıyı yazdırınız.
