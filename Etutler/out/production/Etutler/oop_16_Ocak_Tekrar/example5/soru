@@ -1,0 +1,27 @@
+
+Bina(yapı) sınıfı --> adres, sehir, postaKodu, aylıkKira --> bütün alanların doldurulması zorunludur.
+
+BinaIslemleri --> binaBilgileriniGoster, iletisimBilgileriniGoster, kiraOdeme, gorevliMaasOde, insanEkle, yasayanlarıGoster metotları olacak
+
+İki çeşit yapı olacak. --> Apartman ve Villa
+-->Apartman --> (String)gorevli, AIDAT_ODEMESI, kişiler --> gorevli isminin yazılması zorunludur.
+-->Villa --> (String)bahcivan, AIDAT_ODEMESI, aileler --> bahcivan isminin yazılması zorunludur.
+
+-Apartmanda, yalnızca kişiler oturabilir
+-Villada, yalnızca aileler oturabilir.
+---------------------------------------------------------------------------------------------------------------------------------------
+Kisi ve Ailelerin bazı özellikleri olacak
+
+Kisi--> adı, telNo --> iletisimBilgileriniGoster metodu yalnızca kişi için doldurulacak.
+Aile--> anneAdi, babaAdi, cocukAdi, aileMi
+Bunların ortak noktaları bir soyadlarının olması. Bunun için bir sınıfta 'soyad' property' sini tutalım.
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+görevliMaası --> ödenen aidatın 10 katı olmalıdır.
+iletişimBilgileri --> kisinin bilgileri yer almalıdır.
+binaBilgileri --> binanın bilgileri ve görevlisinin veya bahçıvanınn bilgileri yer almalıdır.
+kiraOdeme --> aylık kiraya ek olarak aidat ödemesi de beraber yapılmalıdır.
+insanEkle --> Kisiler yalnızca apartmana, aileler villaya yerleşebilir. bunun için her iki sınıfta ayrı ayrı metotlarda kontrol yapılmaldıır.
+yasayanlariGoster --> birden fazla yaşayan aileyi veya kişiyi göstermelidir.
+

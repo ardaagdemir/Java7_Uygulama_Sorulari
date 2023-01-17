@@ -18,6 +18,7 @@ public class Takim {
         kaleciOlustur();
     }
 
+    //12:05
     public void defansOlustur(){
         for (int i = 1; i<=4; i++){
             DefansOyuncusu defansOyuncusu = new DefansOyuncusu("Defans" + i, i+1);
