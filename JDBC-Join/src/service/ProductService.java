@@ -128,10 +128,10 @@ public class ProductService implements ICrud<Product> {
     @Override
     public void delete(int productId) {
         try {
-            PreparedStatement list = db.connection.prepareStatement("SELECT \"productId\" FROM products");
+            PreparedStatement list = db.connection.prepareStatement("SELECT id FROM student");
             ResultSet rsList = list.executeQuery();
             while (rsList.next()) {
-                ls.add(rsList.getInt("productId"));
+                ls.add(rsList.getInt("id"));
             }
             if (ls.contains(productId)) {
                 PreparedStatement deleteStatement = db.connection.prepareStatement("DELETE FROM products WHERE \"productId\"=?");
