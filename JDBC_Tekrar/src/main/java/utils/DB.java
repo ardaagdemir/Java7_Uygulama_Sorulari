@@ -1,4 +1,4 @@
-package jdbc_example1;
+package utils;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,7 +7,7 @@ public class DB {
 
     private final String mysqlDriver = "com.mysql.cj.jdbc.Driver";
 
-    private final String url = "jdbc:mysql://localhost/student_jdbc?useUnicode=true&useLegacyDatetimeCode=false&serverTimezone=Turkey&useSSL=false";
+    private final String url = "jdbc:mysql://localhost/jdbc_product_category_customer?useUnicode=true&useLegacyDatetimeCode=false&serverTimezone=Turkey&useSSL=false";
 
     private final String userName = "root";
     private final String userPass = "";
