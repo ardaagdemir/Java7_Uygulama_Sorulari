@@ -15,8 +15,6 @@ public class Category {
         this.name = name;
     }
 
-
-
     public Integer getId() {
         return id;
     }

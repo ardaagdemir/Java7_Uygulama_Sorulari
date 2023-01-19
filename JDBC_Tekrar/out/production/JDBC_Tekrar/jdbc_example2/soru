@@ -1,0 +1,18 @@
+
+Product, Category, Customer classlarını oluşturun.
+product --> id, category, name, price, unitInStock, description
+category --> id, name
+customer --> id, name, identityNumber, product
+
+veritabanındaki tabloları buna göre oluşturun (db name = jdbc_pro_cat_cust)
+
+-Kategorileri veritabanında ekleyin.
+
+-Product ve customer için gerekli 'crud' işlemlerini yazınız. (ProductService, CustomerService)
+
+ProductService
+--> kategorilerin isimlerine göre kaç adet ürün olduğunu gösteriniz
+
+CustomerService
+--> müşterinin ismine göre alınan ürünü, müşteri bilgisini ve ürün kategorisini gösteriniz
+--> belirli bir fiyat altında belirli bir müşterinin aldığı ürünleri gösteriniz

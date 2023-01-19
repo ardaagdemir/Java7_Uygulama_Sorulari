@@ -1,13 +1,18 @@
 package jdbc_example2.service;
 
+
+
 import jdbc_example2.entity.Category;
 import jdbc_example2.entity.Product;
 import utils.DB;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class ProductService implements ICrud<Product>{
 
@@ -15,6 +20,7 @@ public class ProductService implements ICrud<Product>{
     List<Object> list = new ArrayList<>();
     Product product;
 
+    Map<Object,Object> hm = new HashMap<>();
 
     @Override
     public void read() {
@@ -64,11 +70,29 @@ public class ProductService implements ICrud<Product>{
 
     @Override
     public void update(Product product) {
-
     }
-
     @Override
     public void delete(int id) {
+    }
 
+    public void countByCategories(){
+        String sql = "select c.name, count(*) as urun_adedi from products as p inner join categories as c on p.cid=c.id group by c.name";
+
+        try {
+            PreparedStatement preparedStatement = db.connection.prepareStatement(sql);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()){
+                String name = rs.getString("name");
+                Integer count = rs.getInt("urun_adedi");
+
+                //System.out.println(name + ": " + count + " adet");
+                hm.put(name, count);
+            }
+            hm.forEach((K,V)-> System.out.println(K +" : "+V));
+            //System.out.println(hm);
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

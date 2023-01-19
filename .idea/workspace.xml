@@ -1,38 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa0fd716-c694-45be-8b0d-78eec101ee7f" name="Changes" comment="">
+    <list default="true" id="ba5e5da5-0c8a-4d3a-a7b1-1d93a9c6237d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BankaUygulamasi/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BankaUygulamasi/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryExample/out/production/MemoryExample/com/bilgeadam/memory/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryExample/out/production/MemoryExample/com/bilgeadam/memory/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryExample/out/production/MemoryExample/com/bilgeadam/memory/StringPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryExample/out/production/MemoryExample/com/bilgeadam/memory/StringPool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MemoryExample/src/com/bilgeadam/memory/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/MemoryExample/src/com/bilgeadam/memory/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBConnection/DBConnection.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DBConnection/DBConnection.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HibernateExample/HibernateExample.iml" beforeDir="false" afterPath="$PROJECT_DIR$/HibernateExample/HibernateExample.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JDBC-Join/JDBC-Join.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JDBC-Join/JDBC-Join.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library_Management/Library_Management.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Library_Management/Library_Management.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2Imh8dUd1OMaFMKVewn7emQkVAG" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectId" id="2KVxyTSGUKVz0CvzVpB6RPjXZ4m" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,74 +28,22 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Arda/Documents/BilgeAdamEğitim/Java/Java7_Uygulama",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm"
+    "WebServerToolWindowFactoryState": "false"
   }
 }]]></component>
-  <component name="RunManager">
-    <configuration default="true" type="AZURE_FUNCTION_SUPPORT" factoryName="Run Functions">
-      <option name="appName" />
-      <option name="appServicePlanName" />
-      <option name="appServicePlanResourceGroup" />
-      <option name="appSettingsKey" value="7b82d322-543d-4f97-b997-fe00be112761" />
-      <option name="artifact" />
-      <option name="autoPort" value="true" />
-      <option name="debugOptions" />
-      <option name="deployment" />
-      <option name="deploymentStagingDirectoryPath" />
-      <option name="funcPath" />
-      <option name="funcPort" value="0" />
-      <option name="hostJsonPath" />
-      <option name="insightsName" />
-      <option name="instrumentationKey" />
-      <option name="javaVersion" />
-      <option name="localSettingsJsonPath" />
-      <option name="moduleName" />
-      <option name="os" />
-      <option name="pricingTier" />
-      <option name="providerMap">
-        <map />
-      </option>
-      <option name="region" />
-      <option name="resourceGroup" />
-      <option name="stagingFolder" />
-      <option name="subscription" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fa0fd716-c694-45be-8b0d-78eec101ee7f" name="Changes" comment="" />
-      <created>1670792507563</created>
+      <changelist id="ba5e5da5-0c8a-4d3a-a7b1-1d93a9c6237d" name="Changes" comment="" />
+      <created>1674073805766</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1670792507563</updated>
-      <workItem from="1670792508867" duration="10000" />
-      <workItem from="1670792524950" duration="214000" />
-      <workItem from="1670912452000" duration="1889000" />
+      <updated>1674073805766</updated>
+      <workItem from="1674073807220" duration="8000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>

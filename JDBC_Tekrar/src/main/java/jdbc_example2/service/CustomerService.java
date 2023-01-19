@@ -1,4 +1,6 @@
+
 package jdbc_example2.service;
+
 
 import jdbc_example2.entity.Category;
 import jdbc_example2.entity.Customer;
@@ -7,8 +9,8 @@ import utils.DB;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class CustomerService implements ICrud<Customer> {
@@ -73,6 +75,53 @@ public class CustomerService implements ICrud<Customer> {
 
     @Override
     public void delete(int id) {
+        String sql = "select id from customers";
 
+        String sql1 = "delete from customers where id = ?";
+    }
+
+    public void likeByCustomerName(String name){
+        String sql = "select cu.name as customerName, cu.identityNumber, p.name as productName, c.name as categoryName from customers as cu \n" +
+                "inner join products as p on p.id = cu.pid\n" +
+                "inner join categories as c on p.cid = c.id where cu.name like ?";
+        try {
+            PreparedStatement preparedStatement = db.connection.prepareStatement(sql);
+            preparedStatement.setString(1, "%" + name + "%");
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()){
+                String customerName = rs.getString("customerName");
+                Integer identityNumber = rs.getInt("identityNumber");
+                String productName = rs.getString("productName");
+                String categoryName = rs.getString("categoryName");
+
+                System.out.println(customerName + ", " + identityNumber + ", " + productName + ", " + categoryName);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void whereByPrice(int price, String name){
+        String sql = "select cu.name as customerName, p.name as productName, p.price, c.name as categoryName from customers as cu \n" +
+                "inner join products as p on p.id = cu.pid\n" +
+                "inner join categories as c on p.cid = c.id where p.price < ? and cu.name like ?";
+        try {
+            PreparedStatement preparedStatement = db.connection.prepareStatement(sql);
+            preparedStatement.setInt(1, price);
+            preparedStatement.setString(2, "%" + name + "%");
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()){
+                String customerName = rs.getString("customerName");
+                String productName = rs.getString("productName");
+                Integer productPrice = rs.getInt("price");
+                String categoryName = rs.getString("categoryName");
+                customer = new Customer(customerName, new Product(new Category(categoryName), productName, productPrice));
+                list.add(customer);
+            }
+            list.forEach(System.out::println);
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

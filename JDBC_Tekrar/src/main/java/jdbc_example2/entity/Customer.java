@@ -10,6 +10,11 @@ public class Customer {
     //product
     private Product product;
 
+    public Customer(String name, Product product) {
+        this.name = name;
+        this.product = product;
+    }
+
     public Customer(String name, String identityNumber, Product product) {
         this.name = name;
         this.identityNumber = identityNumber;

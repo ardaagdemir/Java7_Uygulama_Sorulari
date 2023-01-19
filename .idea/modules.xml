@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BankaUygulamasi/BankaUygulamasi.iml" filepath="$PROJECT_DIR$/BankaUygulamasi/BankaUygulamasi.iml" />
-      <module fileurl="file://$PROJECT_DIR$/FileExample/FileExample.iml" filepath="$PROJECT_DIR$/FileExample/FileExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CarDealer/CarDealer.iml" filepath="$PROJECT_DIR$/CarDealer/CarDealer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DBConnection/DBConnection.iml" filepath="$PROJECT_DIR$/DBConnection/DBConnection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Etutler/Etutler.iml" filepath="$PROJECT_DIR$/Etutler/Etutler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HibernateExample/HibernateExample.iml" filepath="$PROJECT_DIR$/HibernateExample/HibernateExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JDBC-Join/JDBC-Join.iml" filepath="$PROJECT_DIR$/JDBC-Join/JDBC-Join.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JDBC_Tekrar/JDBC_Tekrar.iml" filepath="$PROJECT_DIR$/JDBC_Tekrar/JDBC_Tekrar.iml" />
       <module fileurl="file://$PROJECT_DIR$/Java7_Uygulama/Java7_Uygulama.iml" filepath="$PROJECT_DIR$/Java7_Uygulama/Java7_Uygulama.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Maraton1_Uygulama/Maraton1_Uygulama.iml" filepath="$PROJECT_DIR$/Maraton1_Uygulama/Maraton1_Uygulama.iml" />
-      <module fileurl="file://$PROJECT_DIR$/MemoryExample/MemoryExample.iml" filepath="$PROJECT_DIR$/MemoryExample/MemoryExample.iml" />
-      <module fileurl="file://$PROJECT_DIR$/StreamAPI/StreamAPI.iml" filepath="$PROJECT_DIR$/StreamAPI/StreamAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Library_Management/Library_Management.iml" filepath="$PROJECT_DIR$/Library_Management/Library_Management.iml" />
     </modules>
   </component>
 </project>
