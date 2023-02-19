@@ -25,7 +25,5 @@ public class Main {
         //customerService.likeByCustomerName("arda");
         //customerService.whereByPrice(2500, "a");
 
-
-
     }
 }
